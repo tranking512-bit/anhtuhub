@@ -7982,3 +7982,20 @@ task.spawn(function()
         idBox.Text = ""
     end)
 end)
+local gui = game.Players.LocalPlayer.PlayerGui
+
+local hubFrame = gui:FindFirstChildWhichIsA("Frame", true)
+
+local function createBow(x,y)
+    local bow = Instance.new("Frame")
+    bow.Size = UDim2.new(0,20,0,20)
+    bow.Position = UDim2.new(x,0,y,0)
+    bow.BackgroundColor3 = Color3.fromRGB(255,105,180)
+    bow.BorderSizePixel = 0
+    bow.Parent = hubFrame
+end
+
+createBow(0,0)
+createBow(1,-20)
+createBow(0,1)
+createBow(1,-20)
