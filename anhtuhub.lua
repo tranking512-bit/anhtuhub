@@ -6760,7 +6760,7 @@ task.spawn(function()
 
     local title = Instance.new("TextLabel", topBar)
     if privateBuild then
-        title.Text = "LETHALHUB PRIVATE"
+        title.Text = "ANHTU HUB"
     else
         title.Text = "LETHALHUB"
     end
