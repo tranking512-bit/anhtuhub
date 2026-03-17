@@ -2096,7 +2096,7 @@ task.spawn(function()
         
         local frame = Instance.new("Frame", bb)
         frame.Size = UDim2.new(1, 0, 1, 0)
-        frame.BackgroundColor3 = Color3.fromRGB(80, 0, 0)
+       frame.BackgroundColor3 = Color3.fromRGB(255,105,180)
         frame.BackgroundTransparency = 0.3
         frame.BorderSizePixel = 0
         Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 6)
