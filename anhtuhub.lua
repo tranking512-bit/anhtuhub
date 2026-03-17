@@ -7982,3 +7982,53 @@ task.spawn(function()
         idBox.Text = ""
     end)
 end)
+task.spawn(function()
+    local player = game.Players.LocalPlayer
+    repeat task.wait() until player and player:FindFirstChild("PlayerGui")
+
+    local RainGui = Instance.new("ScreenGui")
+    RainGui.Parent = player.PlayerGui
+
+    local RainFrame = Instance.new("Frame")
+    RainFrame.Size = UDim2.new(1,0,1,0)
+    RainFrame.BackgroundTransparency = 1
+    RainFrame.Parent = RainGui
+
+    for i = 1, 50 do
+        local drop = Instance.new("Frame")
+        drop.Size = UDim2.new(0,2,0,10)
+        drop.BackgroundColor3 = Color3.fromRGB(255,255,255)
+        drop.BorderSizePixel = 0
+        drop.Parent = RainFrame
+
+        task.spawn(function()
+            while true do
+                drop.Position = UDim2.new(math.random(),0,0,0)
+                for y = 0,1,0.08 do
+                    drop.Position = UDim2.new(drop.Position.X.Scale,0,y,0)
+                    task.wait(0.01)
+                end
+            end
+        end)
+    end
+
+    task.wait(2)
+	local player = game.Players.LocalPlayer
+    local hubFrame = player.PlayerGui:FindFirstChildWhichIsA("Frame", true)
+
+    if hubFrame then
+        local function createBow(x,y)
+            local bow = Instance.new("Frame")
+            bow.Size = UDim2.new(0,20,0,20)
+            bow.Position = UDim2.new(x,0,y,0)
+            bow.BackgroundColor3 = Color3.fromRGB(255,105,180)
+            bow.BorderSizePixel = 0
+            bow.Parent = hubFrame
+        end
+
+        createBow(0,0)
+        createBow(1,-20)
+        createBow(0,1)
+        createBow(1,-20)
+    end
+end)
