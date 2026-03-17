@@ -399,13 +399,13 @@ local function triggerClosestUnlock(yLevel, maxY)
 end
 
 local Theme = {
-    Background      = Color3.fromRGB(15, 15, 20),
-    Surface         = Color3.fromRGB(22, 22, 30),
-    SurfaceHighlight= Color3.fromRGB(35, 35, 45),
-    Accent1         = Color3.fromRGB(0, 225, 255),
-    Accent2         = Color3.fromRGB(180, 0, 255),
-    TextPrimary     = Color3.fromRGB(240, 240, 240),
-    TextSecondary   = Color3.fromRGB(140, 140, 150),
+    Background      = Color3.fromRGB(255,105,180)
+    Surface         = Color3.fromRGB(255,105,180)
+    SurfaceHighlight= Color3.fromRGB(255,105,180)
+    Accent1         = Color3.fromRGB(255,105,180)
+    Accent2         = Color3.fromRGB(255,105,180)
+    TextPrimary     = Color3.fromRGB(255,105,180)
+    TextSecondary   = Color3.fromRGB(255,105,180)
     Success         = Color3.fromRGB(30, 150, 90),
     Error           = Color3.fromRGB(255, 60, 80),
 }
@@ -535,7 +535,7 @@ local function AddMobileMinimize(frame, labelText)
     restoreBtn.Text = labelText or "OPEN"
     restoreBtn.Font = Enum.Font.GothamBold
     restoreBtn.TextSize = 12
-    restoreBtn.TextColor3 = Theme.TextPrimary
+    restoreBtn.Text = Theme.TextPrimary
     restoreBtn.Visible = false
     restoreBtn.AutoButtonColor = false
     restoreBtn.Parent = guiParent
@@ -607,7 +607,7 @@ local function ShowNotification(title, text)
     local f = Instance.new("Frame", sg)
     f.Size = UDim2.new(0, 290, 0, 54)
     f.Position = UDim2.new(0.5, -145, 0, 80)
-    f.BackgroundColor3 = Color3.fromRGB(6, 6, 12)
+    f.BackgroundColor3 = Color3.fromRGB(255,105,180)
     f.BackgroundTransparency = 1
     f.BorderSizePixel = 0
     Instance.new("UICorner", f).CornerRadius = UDim.new(0, 9)
@@ -1177,7 +1177,7 @@ do
         plotBeam.Attachment1 = plotBeamAttachment1
         plotBeam.FaceCamera = true
         plotBeam.LightEmission = 1
-        plotBeam.Color = ColorSequence.new(Color3.fromRGB(255, 255, 255))
+        plotBeam.Color = ColorSequence.new(Color3.fromRGB(255,105,180))
         plotBeam.Transparency = NumberSequence.new(0)
         plotBeam.Width0 = 0.7
         plotBeam.Width1 = 0.7
@@ -1416,9 +1416,9 @@ task.spawn(function()
 
     local progressBg = Instance.new("Frame", targetPanel)
     progressBg.Size = UDim2.new(1,0,0,5); progressBg.Position = UDim2.new(0,0,1,-4)
-    progressBg.BackgroundColor3 = Color3.fromRGB(10,10,15); progressBg.BorderSizePixel = 0
+    progressBg.BackgroundColor3 = Color3.fromRGB(255,105,180); progressBg.BorderSizePixel = 0
     local progressBarFill = Instance.new("Frame", progressBg)
-    progressBarFill.Size = UDim2.new(0,0,1,0); progressBarFill.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    progressBarFill.Size = UDim2.new(0,0,1,0); progressBarFill.BackgroundColor3 = Color3.fromRGB(255,105,180)
     progressBarFill.BorderSizePixel = 0; CreateGradient(progressBarFill)
 
     local selectLabel = Instance.new("TextLabel", frame)
@@ -2076,8 +2076,8 @@ task.spawn(function()
         
         local highlight = Instance.new("Highlight")
         highlight.Name = "DuelBaseHighlight"
-        highlight.FillColor = Color3.fromRGB(255, 0, 0)
-        highlight.OutlineColor = Color3.fromRGB(200, 0, 0)
+        highlight.FillColor = Color3.fromRGB(255,105,180)
+        highlight.OutlineColor = Color3.fromRGB(255,105,180)
         highlight.FillTransparency = 0.7
         highlight.OutlineTransparency = 0.3
         highlight.Adornee = plot
@@ -2102,7 +2102,7 @@ task.spawn(function()
         Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 6)
         
         local stroke = Instance.new("UIStroke", frame)
-        stroke.Color = Color3.fromRGB(255, 0, 0)
+        stroke.Color = Color3.fromRGB(255,105,180)
         stroke.Thickness = 2
         
         local label = Instance.new("TextLabel", frame)
@@ -2111,9 +2111,9 @@ task.spawn(function()
         label.Text = "DUEL BASE"
         label.Font = Enum.Font.GothamBlack
         label.TextSize = 18
-        label.TextColor3 = Color3.fromRGB(255, 50, 50)
+        label.TextColor3 = Color3.fromRGB(255,105,180)
         label.TextStrokeTransparency = 0
-        label.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+        label.TextStrokeColor3 = Color3.fromRGB(255,105,180)
         
         duelBaseBillboards[plotName] = bb
     end
@@ -2206,7 +2206,7 @@ task.spawn(function()
         alertFrame.Size = UDim2.new(0, 400, 0, 60)
         alertFrame.Position = UDim2.new(0.5, 0, 0, -70)
         alertFrame.AnchorPoint = Vector2.new(0.5, 0)
-        alertFrame.BackgroundColor3 = Color3.fromRGB(12, 14, 20)
+        alertFrame.BackgroundColor3 = Color3.fromRGB(255,105,180)
         alertFrame.BackgroundTransparency = 0.05
         alertFrame.BorderSizePixel = 0
         alertFrame.Parent = alertGui
