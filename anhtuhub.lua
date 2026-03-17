@@ -2605,6 +2605,16 @@ task.spawn(function()
     adminGui.Parent = PlayerGui
 
     local frame = Instance.new("Frame")
+		local hubFrame = frame
+
+local function createBow(x,y)
+    local bow = Instance.new("Frame")
+    bow.Size = UDim2.new(0,20,0,20)
+    bow.Position = UDim2.new(x,0,y,0)
+    bow.BackgroundColor3 = Color3.fromRGB(255,105,180)
+    bow.BorderSizePixel = 0
+    bow.Parent = hubFrame
+end
     local mobileScale = IS_MOBILE and 0.65 or 1
     frame.Size = UDim2.new(0, 380*mobileScale, 0, 420*mobileScale) 
     frame.Position = UDim2.new(Config.Positions.AdminPanel.X, 0, Config.Positions.AdminPanel.Y, 0)
